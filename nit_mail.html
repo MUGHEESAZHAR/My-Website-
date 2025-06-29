@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complain / Suggestion</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+        emailjs.init("iJW_00ukFtQegmADw");
+        })();
+    </script>
+    <script src="script.js"></script>
+    <style>
+        .first-bann{
+            background-color: rgb(17, 17, 130);
+            padding-bottom: 5px;
+            padding-top: 1px;
+            font-size: 60px;
+            color: white;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+        .second-bann{
+            padding-bottom: 10px;
+            padding-left: 100px;
+            display: flex;
+            padding-top: 10px;
+            font-size: 55px;
+            color: black;
+            margin-top: 0px;
+            margin-bottom: 20px;
+        }
+        .nit-logo{
+            height: 500px;
+            width: 1200px;
+            margin: 0px;
+        }
+        .login-button{
+            background-color: white;
+            color: rgb(17, 17, 130);
+            font-weight: bold;
+            font-size: 52px;
+            border-color: rgb(17, 17, 130);
+            height: 140px;
+            width: 280px;
+            border-radius: 42px;
+            border-width: 1px;
+            border-style: solid;
+            margin-right: 0px;
+            cursor: pointer;
+
+            transition: background-color 0.3s , color 0.3s , opacity 0.3s;
+        }
+        .login-button:hover{
+            background-color: rgb(17, 17, 130);
+            color: white;
+            border-color: red;
+        }
+        .login-button:active{
+            opacity: 0.7;
+        }
+        .signup-button{
+            background-color: white;
+            color: rgb(17, 17, 130);
+            font-weight: bold;
+            font-size: 52px;
+            border-color: rgb(17, 17, 130);
+            height: 140px;
+            width: 280px;
+            border-radius: 42px;
+            border-width: 1px;
+            border-style: solid;
+            margin-right: 0px;
+            cursor: pointer;
+
+            transition: background-color 0.3s , color 0.3s , opacity 0.3s;
+        }
+        .signup-button:hover{
+            background-color: rgb(17, 17, 130);
+            color: white;
+            border-color: red;
+        }
+        .signup-button:active{
+            opacity: 0.7;
+        }
+        .banner img{
+            width: 100%;
+            height: 1400px;
+            object-fit: cover;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+        }
+        .first-line{
+            margin-top: 300px;
+            font-size: 60px;
+            padding-left: 450px;
+            width: 5300px;
+        }
+        .container{
+            display: flex;
+            justify-content: space-between;
+            font-size: 60px;
+            font-family: Roboto, sans-serif;
+            padding-left: 450px;
+            padding-right: 500px;
+        }
+        .firstcomplain-line{
+            width: 80px;
+        }
+        .secondcomplain-line{
+            font-size: 120px;
+            padding-left: 450px;
+            margin-bottom: 10px;
+        }
+        .second-container-edit{
+            padding-top: 40px;
+        }
+        .first-checkbox{
+            height: 60px;
+            width: 60px;
+            border-radius: 30%;
+            border: 2px solid;
+            cursor: pointer;
+        }
+        .second-checkbox{
+            height: 60px;
+            width: 60px;
+            border-radius: 2050%;
+        }
+        .name-input{
+            height: 100px;
+            width: 3300px;
+            font-size: 45px;
+            color: rgb(153, 147, 147);
+            padding-left: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+            border-color: rgb(207, 207, 207);
+            border-style: solid;
+            border-width: 12px;
+        }
+        .mobile-input{
+            height: 100px;
+            width: 3300px;
+            padding-left: 30px;
+            padding-top: 15px;
+            padding-bottom: 20px;
+            font-size: 45px;
+            color: rgb(194, 191, 191);
+            border-radius: 8px;
+            border-color: rgb(207, 207, 207);
+            border-style: solid;
+            border-width: 12px;
+        }
+        .email-input{
+            height: 100px;
+            width: 3300px;
+            font-size: 45px;
+            padding-left: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            color: rgb(194, 191, 191);
+            border-radius: 8px;
+            border-color: rgb(207, 207, 207);
+            border-style: solid;
+            border-width: 12px;
+        }
+        .account-input{
+            height: 100px;
+            width: 3300px;
+            font-size: 45px;
+            padding-left: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            color: rgb(194, 191, 191);
+            border-radius: 8px;
+            border-color: rgb(207, 207, 207);
+            border-style: solid;
+            border-width: 12px;
+        }
+        .emailaddress-input{
+            height: 100px;
+            width: 3300px;
+            font-size: 45px;
+            padding-left: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            color: rgb(194, 191, 191);
+            border-radius: 8px;
+            border-color: rgb(207, 207, 207);
+            border-style: solid;
+            border-width: 12px;
+        }
+        .message-input{
+            height: 300px;
+            font-size: 45px;
+            width: 3300px;
+            padding-left: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            vertical-align: top;
+            color: rgb(194, 191, 191);
+            border-radius: 8px;
+            border-color: rgb(207, 207, 207);
+            border-style: solid;
+            border-width: 12px;
+        }
+        .textarea.form-control{
+            min-height: calc(10.5rem + (.75rem + 2rem));
+        }
+        .textarea.form-control{
+            height: auto;
+        }
+        .submit-button{
+            background-color: rgb(71, 71, 208);
+            color: white;
+            font-size: 60px;
+            margin-top: 20px;
+            border: none;
+            height: 150px;
+            width:  850px;
+            border-radius: 70px;
+            margin-right: 8px;
+            cursor: pointer;
+            margin-top: 12px;
+            margin-left: 1100px;
+
+            transition: box-shadow 0.2s, opacity 0.2s ;
+        }
+        .submit-button:hover{
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        .submit-button:active{
+            opacity: 0.5;
+        }
+        .second-container{
+            margin-top: 680px;
+        }
+        .third-container{
+            font-size: 60px;
+            padding-left: 450px;
+            margin-bottom: 600px;
+        }
+        .last-image{
+            margin-left: 2000px;
+            height: 350px;
+            margin-bottom: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div style="font-family: Roboto, sans-serif; padding-bottom: 5px;" class="first-bann">
+    <p>
+        <span style="padding-right: 1400px; padding-left: 120px;">
+            Call Centre 0800-00NIT(0800-00648)
+        </span> 
+        <span style="padding-right: 2200px;">
+            Raast | 60 Years Special Reports
+        </span>
+        <span >
+            search
+        </span>
+    </p>
+    </div>
+    <div style="font-family: Roboto, sans-serif;" class="second-bann">
+        <div>
+            <img class="nit-logo" src="NIT-Animated-Logo.gif">
+        </div>
+        <div>
+            <p style="padding-left: 700px; padding-top: 120px; ">
+                <span style="padding-right: 80px; cursor: pointer;">About Us &#8250; </span>
+                <span style="padding-right: 80px; cursor: pointer;">Corporate Info &#8250; </span>
+                <span style="padding-right: 80px; cursor: pointer;">Funds &#8250; </span>
+                <span style="padding-right: 80px; cursor: pointer;">Downloads &#8250; </span>
+                <span style="padding-right: 80px; cursor: pointer;">Investor Service &#8250; </span>
+                <span style="padding-right: 80px; cursor: pointer;">Media &#8250; </span>
+                    <button style="margin-left: 1050px;" class="login-button">
+                        Login
+                    </button>
+                    <button class="signup-button">
+                        Sign Up
+                    </button>
+            </p>
+        </div>
+    </div>        
+        <div class="banner">
+            <img class="banner img" src="banner-nitl.webp">
+        </div>
+        <div style="background-color: rgb(240, 240, 240); border-radius: 1px; border-radius: 20px; height: 4200px; margin-bottom: 00px; box-shadow: 0px 0px 13px rgba(0, 0, 0,0.4);">
+        <p style="font-family: Roboto, sans-serif; padding-top: 150px;" class="first-line">
+            Management of NITL endeavors to provide best possible services to its valued unit holders. For any complaint or query. please contact directly to Manager-IFC or Head office for early resolution: 
+        </p>
+        <h1 style="font-family: Roboto, sans-serif; padding-top: 30px;" class="secondcomplain-line">
+            Customer Complain And Suggestion <br> Form
+        </h1>
+        <div class="container">
+            <div style="width: 40%;">
+                <h4 style="margin-bottom: 0px;">
+                    Mr. Abdul Raziq
+                </h4>
+                    <p style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">Manager-Investers Facilitation Centre</p>
+                    <p style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">08 Lakson Square, Bldg No.1 Sarwar Shaheed Road.</p> 
+                    <p style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">Opp.Karachi press Club Saddar, Karachi</p> 
+                    <p style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">Tel: 021-35644561-63</p>  
+                    <P style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">Mobile No. 0303-3648</P> 
+                    <p style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">E-mail:complaint@nit.com.pk</p> 
+                    OR 
+                    <h4 style="margin-bottom: 0px;">
+                        Mr.Abdul Majid
+                    </h4>
+                    <p style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">Chief Manager Marketing</p>
+                    <p style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">National Investment Trust Limited</p>
+                    <p style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">Head Office, Karachi</p> 
+                    <p style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">Tel: 021-32414182</p> 
+                    <p style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">Mobile No. : 0322-8241512</p> 
+                    <p style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">E-mail:complaint@nit.com.pk</p> 
+                    OR
+                    <h4 style="margin-bottom: 0px;">
+                        Mr. Sohail Moosa
+                    </h4> 
+                    <p style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">Manager NIT Call Centre</p>
+                    <p style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">08 Lakson Square, Bldg. No.1, Sarwar Shaheed Road,</p>
+                    <p style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">Opp.Karachi Press Club, Saddar, Karachi</p>
+                    <p style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">Tell: 021-35644561-63</p>
+                    <p style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">Mobile No. : 0303-3648648</p> 
+                    <p style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">E-mail: complaint@nit.com.pk</p>
+                    <p></p>
+                    
+            </div>
+            <div style="font-family: Roboto, sans-serif;" class="second-container-edit">
+                <h4>
+                    Do you have any Investment in NIT? 
+                    <input class="first-checkbox" type="radio" id="yes" name="investment" value="yes">
+                    <label for="yes">Yes</label>
+    
+                    <input class="second-checkbox" type="radio" id="no" name="investment" value="no">
+                    <label for="no">No</label>
+                </h4>
+                <div class="user-input">
+                    <p></p>
+                    <input class="name-input" type="text" placeholder="Enter name">
+                    <p></p>
+                    <input class="mobile-input" type="text" placeholder="Mobile No">
+                    <p></p>
+                    <input class="email-input" type="text" placeholder="Enter Email">
+                    <p></p>
+                    <input class="account-input" type="text" placeholder="Enter Amount No">
+                    <p></p>
+                    <input class="emailaddress-input" type="text" placeholder="Enter Address">
+                    <p></p>
+                    <textarea class="message-input" placeholder="Message"></textarea>
+                </div>
+                <p></p>
+                <p></p>
+                <p></p>
+                <button type="submit" onclick="sendMail()" class="submit-button">
+                    Submit
+                </button>
+            </div>
+        </div>
+        <div class="third-container">
+            <h3>
+                NIT Call Centre:0800-00648
+            </h3>
+            <p style="width: 100%; font-family: Roboto, sans-serif;">
+                DISCLAIMER: "In case your complaint has not been
+                properly redressed by us,you may lodge your 
+                complaint with securities and Exchange Commision
+                of Pakistan <br> (the "SECP").Howeverm please note
+                that SECP will entertain only those complaints 
+                which were at first directly requested to the
+                complany and the <br> company as failed to redress
+                the same, Further,the complaints that are not 
+                relevant to SECP's regulatory dmain/competence 
+                shall not be entertained"
+            </p>
+        </div>
+        <img class="last-image" src="ending.jpg">
+        </div>
+</body>
+</html>
